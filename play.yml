@@ -1,0 +1,11 @@
+---
+- name: Playbook to update saltshaker
+  hosts: hosts
+  gather_facts: true
+  become: true
+
+  tasks:
+    - name: Clone windows repository
+      git:
+        repo: https://github.com/Raghuvivek/windows.git
+        dest: /srv/
